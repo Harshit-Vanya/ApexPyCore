@@ -1,0 +1,1006 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0D3B66;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-links button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  .nav-links button:hover {
+    color: #FFD700;
+  }
+
+  .home-section {
+    background-color: #0D3B66;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: color 0.3s;
+  }
+
+  
+  .home-section :hover {
+    color: yellow;
+  }
+
+  .about-section {
+    background-color: #0D3B66;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .contact-section {
+    background-color: #0D3B66;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .help-section {
+    background-color: #0D3B66;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #afafaf;
+    background-image: url('rm218-bb-07.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+
+
+.container {
+   position:absolute;
+    width: 390px;
+    left : 390px;
+    bottom: 80px;
+    height: 450px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#symptomDropdown {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    padding: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#symptomDropdown option {
+    padding: 5px;
+}
+
+.addSymptomsButton {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 167, 62, 1) 0%,
+      rgba(102, 247, 113, 1) 100%
+    );
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+  }
+  
+.addSymptomsButton.hide {
+  display:none;
+}
+.addSymptomsButton svg {
+    margin-right: 6px;
+}
+
+.addSymptomsButton:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px; 
+    left: -250px; 
+    width: 250px;
+    padding: 20px;
+    background-color: #1D3557;
+    color: white;
+    height: calc(100vh - 35px); 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: left 0.3s ease; 
+    border-radius: 15px;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+#selectButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #2ECC71;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#searchButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #259453;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: none;
+    margin-top: 20px;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addSymptomsButton {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg,  rgb(2, 190, 43)0%, rgb(0, 255, 0) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #055d9798;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.addSymptomsButton:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+
+
+
+
+.remove-symptom {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+.remove-symptom:hover {
+    color: darkred;
+}
+
+
+#selectedSymptomsList {
+    max-height: 70vh; 
+    overflow-y: auto;  
+    padding-right: 10px;  
+}
+
+
+#selectedSymptomsList li {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 10px;
+    background-color: #0f0f38; 
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+.remove-symptom {
+    cursor: pointer;
+    color: red;
+    font-size: 1.2em;
+}
+.remove-symptom:hover {
+    color: darkred;
+}
+
+.clear-button {
+    width: 100%;
+    background-color: #E63946; 
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.clear-button:hover {
+    background-color: #C0392B;  
+}
+
+
+.search-button {
+    width: 100%;
+    background-color: #2ECC71;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.search-button:hover {
+    background-color: #27AE60;  
+}
+
+.help-sidebar {
+    position: fixed;
+    top: 60px; 
+    right: -450px; 
+    width: 450px;
+    padding: 20px;
+    background-color: #1D3557;
+    color: white;
+    height: calc(100vh - 35px); 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.3s ease; 
+    border-radius: 15px;
+}
+
+.help-sidebar.show {
+    right: 0;
+}
+
+.faq-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+    
+  }
+  .faq-button svg {
+    height: 1.5em;
+    fill: white;
+  }
+  .faq-button:hover svg {
+    animation: jello-vertical 0.7s both;
+  }
+  @keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ff2525;
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -15%;
+    transition-duration: 0.3s;
+  }
+  
+  .faq-button:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+  
+
+  .help-sidebar {
+    background-color: #1D3557;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    width: 450px;
+}
+
+.help-sidebar h3 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.help-sidebar-item {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.help-sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.help-sidebar-answer-popup {
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.help-sidebar-answer-popup.show {
+    display: block;
+}
+
+
+.card {
+  position: absolute;
+  top: -45em;
+  width: 34em;
+  height: 45em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.show {
+  top: 8em;
+}
+
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card .img {
+  width: 300px;
+  height: 300px;
+  background-image: url("IMG-20241007-WA0109.jpg");
+  background-size: contain;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.form {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  height: 290px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  top: -290px;
+  right: 10px;
+}
+
+.form.show{
+  top:60px;
+}
+
+.form .title {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 100px;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.form button {
+  margin-left: 43%;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.slider-container {
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  max-width: 1200px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.slide-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.slide-description {
+  font-size: 18px;
+  color: #666;
+}
+
+.pagination {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-container {
+    max-width: 90%;
+    height: 250px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 34em;
+  }
+
+  .help-sidebar {
+    width: 350px;
+  }
+
+  .help-sidebar-item {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .slider-container {
+    height: 200px;
+    top: 120px;
+  }
+
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide img, .slide-content {
+    width: 100%;
+    height: 50%;
+  }
+
+  .container {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+  }
+
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+
+  .sidebar.show {
+    width: 100%;
+  }
+
+  .help-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .help-sidebar.show {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    min-height: 45em;
+  }
+
+  .form {
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links button {
+    font-size: 14px;
+  }
+
+  .addSymptomsButton {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .slider-container {
+    height: 150px;
+  }
+
+  .slide-title {
+    font-size: 18px;
+  }
+
+  .slide-description {
+    font-size: 14px;
+  }
+
+  #symptomDropdown {
+    height: 150px;
+  }
+
+  .help-sidebar h3 {
+    font-size: 2em;
+  }
+
+  .help-sidebar-item {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .card .img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Fix for smaller height screens */
+@media screen and (max-height: 700px) {
+  .sidebar, .help-sidebar {
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  .card {
+    height: auto;
+    min-height: 35em;
+  }
+}
+
+.result-container {
+    position: fixed;
+    width: 700px;
+    height: 200px;
+    right : 430px;
+    bottom: -450px;
+    height: 450px;
+    text-align: center;
+    background-color: #1D3557;
+    color: white;
+    box-sizing: border-box;
+    transition: bottom 0.3s ease;
+    border-radius: 6px;
+    z-index: 900;
+}
+
+.result-container.show {
+    bottom: 60px;
+}
+
+.disease-result {
+    background-color: #0f0f38;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.disease-result p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.disease-description {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.result-container {
+    /* Update existing styles */
+    height: auto;
+    min-height: 450px;
+    padding: 20px;
+}
+
+.result-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: none;
+}
+
+.result-container.show {
+    display: block;
+}
+
+.disease-result {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.learn-more-btn, .rediagnose-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.rediagnose-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.learn-more-btn:hover, .rediagnose-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.result-heading {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.disease-result {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.help-sidebar h5{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
